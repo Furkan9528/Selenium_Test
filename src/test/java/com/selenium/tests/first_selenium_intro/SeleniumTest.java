@@ -28,7 +28,7 @@ public class SeleniumTest {
         //Stop code execution for 3 second
         Thread.sleep(3000);
 
-        // use selenium to navigate forwad
+        // use selenium to navigate forward
         driver.navigate().forward();
 
         //Stop code execution for 3 second

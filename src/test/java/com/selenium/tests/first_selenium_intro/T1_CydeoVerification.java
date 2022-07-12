@@ -8,8 +8,7 @@ public class T1_CydeoVerification {
 
     /*
     IN THIS CLASS WE ARE SOLVING THE DAYS_TASK1
-     */
-
+    */
 
     public static void main(String[] args) {
 

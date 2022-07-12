@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T5_getText_getAttribute {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         //TC #5: getText() and getAttribute() method practice
@@ -22,8 +22,9 @@ public class T5_getText_getAttribute {
         //3. Verify header text is as expected:
         WebElement headerText = driver.findElement(By.tagName("h2"));
 
+        Thread.sleep(3000);
         //Expected: Registration form
-        String expectedHeaderText = headerText.getText();
+        String expectedHeaderText = "Registration form";
         String actualHeaderText = headerText.getText(); // will return "Registration form" as String
 
         if(actualHeaderText.equals(expectedHeaderText)){
@@ -32,7 +33,7 @@ public class T5_getText_getAttribute {
             System.out.println("Header text verification FAILED!!");
         }
 
-
+        Thread.sleep(3000);
         //4. Locate "First nameé input box
         // we are locationg the web element using "name" locator
         // name attribute has "firstname" value
@@ -49,7 +50,7 @@ public class T5_getText_getAttribute {
             System.out.println("Placeholder text verification FAILED!!");
         }
 
-        driver.close();
+        //driver.close();
 
     }
 

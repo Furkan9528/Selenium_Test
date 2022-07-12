@@ -30,10 +30,10 @@ public class T2_Linktext_Practice {
 
         //4- Verify title is:
         //Expected: No A/B Test
-        String expecteedTitle = "No A/B Test";
+        String expectedTitle = "No A/B Test";
         String actualTitle = driver.getTitle();
 
-        if(actualTitle.equals(expecteedTitle)){
+        if(actualTitle.equals(expectedTitle)){
             System.out.println("Title verification PASS!");
         }else{
             System.out.println("Title verification FAILED!!!");
