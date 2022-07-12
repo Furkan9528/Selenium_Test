@@ -15,7 +15,7 @@ public class T2_getText_getAttribute {
         driver.manage().window().maximize();
 
         //2- Go to: https://login1.nextbasecrm.com/
-        driver.get("https.//login1.nextbasecrm.com/");
+        driver.get("https://login1.nextbasecrm.com/");
 
         //3- Verify “remember me” label text is as expected:
         //Expected: Remember me on this computer
@@ -27,7 +27,7 @@ public class T2_getText_getAttribute {
         if(actualRememberMeLabel.equals(expectedRememberMeLabel)){
             System.out.println("Label verification PASSED!!");
         }else{
-            System.out.println("Labele verification FAILED!!");
+            System.out.println("Label verification FAILED!!");
         }
 
 
@@ -36,17 +36,37 @@ public class T2_getText_getAttribute {
         //Expected: Forgot your password?
         WebElement forgotPasswordLink = driver.findElement(By.className("login-link-forgot-pass"));
 
-        String expectedForgotPasswordLinkText = "Forgot your password?";
+        String expectedForgotPasswordLinkText = "FORGOT YOUR PASSWORD?";
         String actualForgotPasswordLinkText = forgotPasswordLink.getText();
 
         if(actualForgotPasswordLinkText.equals(expectedForgotPasswordLinkText)){
             System.out.println("Forgot password link verification PASSED!");
         }else{
+            System.out.println("actualForgotPasswordLinkText = "+ actualForgotPasswordLinkText);
+            System.out.println("expectedForgotPasswordLinkText =" +expectedForgotPasswordLinkText);
+
             System.out.println("Forgot password link verification FAILED!!");
+
         }
 
         //5- Verify “forgot password” href attribute’s value contains expected:
         //Expected: forgot_password=yes
+        String expectedInHref = "forgot_password=yes";
+        String actualHrefAttributeValue = forgotPasswordLink.getAttribute("href");
+
+        System.out.println("actualHrefAttributeValue = " + actualHrefAttributeValue);
+
+
+        if(actualHrefAttributeValue.contains(expectedInHref)){
+            System.out.println("HREF attribute value verification PASSED!");
+        }else{
+            System.out.println("HREF attribute value verification FAILED!!");
+        }
+
+
+
+
+
 
 
     }
