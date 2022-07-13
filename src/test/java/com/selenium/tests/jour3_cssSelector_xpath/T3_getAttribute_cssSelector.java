@@ -1,4 +1,4 @@
-package com.selenium.tests.third_cssSelector_xpath;
+package com.selenium.tests.jour3_cssSelector_xpath;
 
 import com.selenium.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
