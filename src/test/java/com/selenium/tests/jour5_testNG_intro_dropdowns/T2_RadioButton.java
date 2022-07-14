@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class T2_RadioButton {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //TC #2: Radiobutton handling
         //1. Open Chrome browser
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -23,6 +23,7 @@ public class T2_RadioButton {
         //3. Click to “Hockey” radio button
         WebElement hockeyRadioBtn = driver.findElement(By.xpath("//input[@id='hockey']"));
 
+        Thread.sleep(2000);
         hockeyRadioBtn.click();
 
         //4. Verify “Hockey” radio button is selected after clicking.
