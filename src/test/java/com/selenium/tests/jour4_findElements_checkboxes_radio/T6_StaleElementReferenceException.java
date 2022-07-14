@@ -33,7 +33,6 @@ public class T6_StaleElementReferenceException {
         cydeoLink = driver.findElement(By.xpath("//a[text()='CYDEO']"));
 
         //5- Verify it is displayed, again.
-        cydeoLink = driver.findElement(By.xpath("//a[text()='CYDEO']"));
         System.out.println("cydeoLink.isDisplayed() = " + cydeoLink.isDisplayed());
 
 
