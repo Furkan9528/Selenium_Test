@@ -23,8 +23,6 @@ public class T4_SimpleDropdowns {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //2. Go to https://practice.cydeo.com/dropdown
         driver.get("https://practice.cydeo.com/dropdown");
-
-
     }
 
     @Test
