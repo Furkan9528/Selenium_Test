@@ -5,7 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,8 @@ public class T4_IframePractice {
 
     WebDriver driver;
 
-    @BeforeMethod
+    //@BeforeMethod
+    @BeforeClass
     public void setupMethod(){
         //1. Open browser
         driver = WebDriverFactory.getDriver("chrome");
@@ -25,20 +27,35 @@ public class T4_IframePractice {
         driver.get("https://practice.cydeo.com/iframe");
     }
 
+    @Ignore
     @Test
     public void iframe_test(){
 
         //We need to switch driver's focus to iframe
         //option #1 - switching to iframe using id attribute value
-        driver.switchTo().frame("mce_0_ifr");
+        //driver.switchTo().frame("mce_0_ifr");
 
+        //option #2- passing index number of iframe
+        //driver.switchTo().frame();
 
+        //option #3- locate as web element and pass in frame() method
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
+        
         //Locate the p tag
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
 
         Assert.assertTrue(yourContentGoesHereText.isDisplayed());
 
-        
+        //Verify "An iFrame containing the TinyMCE Editor"
+        //To be able to verify the header, we must switch back to "main HTML"
+        driver.switchTo().parentFrame();
+
+        WebElement headerText = driver.findElement(By.xpath("//h3"));
+
+        //assertion of header text is displayed or not
+        Assert.assertTrue(headerText.isDisplayed());
+
+
 
 
     }
