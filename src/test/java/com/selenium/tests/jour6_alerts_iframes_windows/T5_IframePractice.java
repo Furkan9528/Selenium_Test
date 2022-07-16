@@ -26,7 +26,22 @@ public class T5_IframePractice {
     @Test
     public void multiple_windows_test(){
 
+        //Storing the main page's windows handle as string
+        // good practice for future re-usable purposes
+        String mainHandle = driver.getWindowHandle();
+
+        System.out.println("mainHandle = " + mainHandle);
+
+
+        //4.Assert Title is "Windows"
+        String expectedTitle = "Windows";
+        String actualTitle = driver.getTitle();
+
+        //5. Click to : "Click Here" Link
+
         
+
+
     }
 
 }
