@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,7 @@ public class T4_SimpleDropdowns {
 
     WebDriver driver;
 
-    @Test
+    @BeforeMethod
     public void setupMethod(){
 
         //1. Open Chrome browser
@@ -24,6 +25,7 @@ public class T4_SimpleDropdowns {
         //2. Go to https://practice.cydeo.com/dropdown
         driver.get("https://practice.cydeo.com/dropdown");
     }
+
 
     @Test
     public void simpleDropdownTest(){
@@ -36,11 +38,9 @@ public class T4_SimpleDropdowns {
         String actualSimpleDropdownText = currentlySelectedOption.getText();
         String  expectedSimpleDropdownText = "Please select an option";
 
-        Assert.assertEquals(actualSimpleDropdownText, expectedSimpleDropdownText);
+        Assert.assertEquals(actualSimpleDropdownText, expectedSimpleDropdownText, "TRUE");
 
         //Expected: “Please select an option”
-        Assert.assertEquals(actualSimpleDropdownText, expectedSimpleDropdownText);
-
         //4. Verify “State selection” default selected value is correct
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state]")));
 

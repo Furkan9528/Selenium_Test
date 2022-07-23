@@ -21,8 +21,8 @@ public class T3_GoogleSearch {
         driver.get("https://www.google.com");
 
         //accept permission cookies
-        WebElement cookies = driver.findElement(By.xpath("//div[.='Tümünü kabul et']"));
-        cookies.click();
+        //WebElement cookies = driver.findElement(By.xpath("//div[.='Tümünü kabul et']"));
+        //cookies.click();
 
         //3- Write "apple" in search box
         //4- PRESS ENTER using Keys.ENTER

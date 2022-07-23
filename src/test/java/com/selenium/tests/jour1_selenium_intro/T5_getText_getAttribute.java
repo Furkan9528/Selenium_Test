@@ -10,7 +10,6 @@ public class T5_getText_getAttribute {
 
     public static void main(String[] args) throws InterruptedException {
 
-
         //TC #5: getText() and getAttribute() method practice
         //1. Open a chrome browser
         WebDriverManager.chromedriver().setup();
@@ -34,8 +33,8 @@ public class T5_getText_getAttribute {
         }
 
         Thread.sleep(3000);
-        //4. Locate "First nameé input box
-        // we are locationg the web element using "name" locator
+        //4. Locate "First name input box
+        // we are locating the web element using "name" locator
         // name attribute has "firstname" value
         WebElement firstNamInput = driver.findElement(By.name("firstname"));
 

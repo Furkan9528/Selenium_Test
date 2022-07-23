@@ -31,8 +31,6 @@ public class DropdownPractices {
     @Test
     public void dropdown_task5() throws InterruptedException {
 
-
-
         //we located the dropdown and it is ready to use
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
 
@@ -92,7 +90,7 @@ public class DropdownPractices {
 
     @AfterMethod
     public void  teardownMethod(){
-        driver.close();
+        //driver.close();
     }
 
 

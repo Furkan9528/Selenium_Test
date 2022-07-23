@@ -46,9 +46,9 @@ public class SeleniumTest {
         //get the title of the page
         //System.out.println(driver.getTitle());
 
-
         String currentTitle = driver.getTitle();
         System.out.println(currentTitle);
+
 
         //Get the current URL using Selenium
         String currentURL = driver.getCurrentUrl();

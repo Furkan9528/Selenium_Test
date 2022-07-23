@@ -14,7 +14,7 @@ public class T1_locators_getText {
         //1- Open a chrome browser
         // WebDriverManager.chromedriver().setup();
         // WebDriver driver = new ChromeDriver();
-        WebDriver driver = WebDriverFactory.getDriver("firefox");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         driver.manage().window().maximize();
 
@@ -44,7 +44,7 @@ public class T1_locators_getText {
         String actualErrorMessage = errorMessage.getText();
 
         if(actualErrorMessage.equals(expectedErrorMeesage)){
-            System.out.println("error messagfe verificaiton PASSED!");
+            System.out.println("error message verificaiton PASSED!");
         }else{
             System.out.println("error message verification FAILED!!");
         }

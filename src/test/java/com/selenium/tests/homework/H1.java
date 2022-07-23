@@ -20,23 +20,23 @@ public class H1 {
         driver.get("https://www.etsy.com");
 
         //accept permission cookies
-        Thread.sleep(3000);
-        WebElement cookies = driver.findElement(By.cssSelector("'wt-btn.wt-btn--filled.wt-mb-xs-0'"));
+        Thread.sleep(1000);
+        WebElement cookies = driver.findElement(By.cssSelector("button.wt-btn.wt-btn--filled.wt-mb-xs-0"));
         cookies.click();
 
         //3. Search for “wooden spoon”
-        WebElement googleSearchBox = driver.findElement(By.name("global-enhancements-search-query"));
-        googleSearchBox.sendKeys("wooden spoon" + Keys.ENTER);
+        WebElement searchBox = driver.findElement(By.name("search_query"));
+        searchBox.sendKeys("wooden spoon" + Keys.ENTER);
 
         //4. Verify title:
         //Expected: “Wooden spoon | Etsy”
-        String expectedInTitle = "Wooden spoon - Etsy FR";
-        String actualTitle = driver.getTitle();
+        String actualTitle = "Wooden spoon - Etsy FR";
+        String expectedTitle = driver.getTitle();
 
-        if(actualTitle.contains(expectedInTitle)){
-            System.out.println("Title verification PASSED!");
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("True Title");
         }else{
-            System.out.println("Title verification FAILED!");
+            System.out.println("False Title");
         }
 
     }

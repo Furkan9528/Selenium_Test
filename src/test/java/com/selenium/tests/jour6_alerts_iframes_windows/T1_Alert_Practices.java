@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 
 public class T1_Alert_Practices {
 
-
     WebDriver driver;
 
     @BeforeMethod
@@ -29,7 +28,7 @@ public class T1_Alert_Practices {
     }
 
     @Test
-    public void alert_test1() throws InterruptedException {
+    public void alert_test1() throws InterruptedException  {
         //3. Click to "Click for JS Alert" button
         WebElement informationAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
 

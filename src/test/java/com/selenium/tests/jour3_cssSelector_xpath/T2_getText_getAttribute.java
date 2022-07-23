@@ -63,12 +63,6 @@ public class T2_getText_getAttribute {
             System.out.println("HREF attribute value verification FAILED!!");
         }
 
-
-
-
-
-
-
     }
 
 

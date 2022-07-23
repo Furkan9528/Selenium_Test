@@ -44,7 +44,6 @@ public class T1_CydeoVerification {
         }
 
         driver.close();
-
         // if(driver.getTitle().equals("Pratice"))
 
 

@@ -32,6 +32,7 @@ public class T3_RadioButton_cont {
     }
 
     private static void clickAndVerifyRadioButton(WebDriver driver, String nameAttribute, String idValue){
+
         List<WebElement> radioButtons = driver.findElements(By.name(nameAttribute));
 
         //Loop through the List of WebElement and select matching result "hockey"

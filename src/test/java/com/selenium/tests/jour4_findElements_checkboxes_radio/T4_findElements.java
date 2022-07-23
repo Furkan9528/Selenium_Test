@@ -31,7 +31,6 @@ public class T4_findElements {
         System.out.println("allLinks.size() = " + allLinks.size());
 
         //5- Print out the texts of the links.
-
         for (WebElement each : allLinks) {
             System.out.println("Text of link: " + each.getText());
             System.out.println("HREF Values: " + each.getAttribute("href"));

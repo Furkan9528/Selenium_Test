@@ -1,8 +1,5 @@
 package com.selenium.utilities;
 
-
-
-
 //TASK: New Method Creation
 //Method name : getDriver
 // Static method
@@ -11,7 +8,6 @@ package com.selenium.utilities;
 // -if "chrome" passed --> it will open chrome browser
 // -if "firefox" passed --> it will open firefox browser
 // Return type: "WebDriver"
-
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
