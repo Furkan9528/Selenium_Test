@@ -23,13 +23,31 @@ public class H3 {
         //3- Click to Gmail from top right.
         WebElement gmailText= driver.findElement(By.linkText("Gmail"));
         gmailText.click();
-        
+
         //4- Verify title contains:
         //  Expected: Gmail
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Gmail";
+
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("True Title");
+        }else {
+            System.out.println("False Title"+expectedTitle);
+        }
+
         //5- Go back to Google by using the .back();
+        driver.navigate().back();
+
         //6- Verify title equals:
         //  Expected: Google
-        //
+        String actualTitleM = driver.getTitle();
+        String expectedTitleM = "Google";
+
+        if(actualTitleM.equals(expectedTitleM)){
+            System.out.println("True Title");
+        }else {
+            System.out.println("False Title");
+        }
     }
 
 
