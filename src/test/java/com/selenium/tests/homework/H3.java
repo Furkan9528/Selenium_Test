@@ -40,8 +40,8 @@ public class H3 {
 
         //6- Verify title equals:
         //  Expected: Google
-        String actualTitleM = driver.getTitle();
-        String expectedTitleM = "Google";
+        String actualTitleM = "Google";
+        String expectedTitleM = driver.getTitle();
 
         if(actualTitleM.equals(expectedTitleM)){
             System.out.println("True Title");
