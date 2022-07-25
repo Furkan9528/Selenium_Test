@@ -1,5 +1,6 @@
 package com.selenium.tests.jour7_webtable_utilities_javafaker;
 
+import com.selenium.utilities.BrowserUtils;
 import com.selenium.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -36,6 +37,9 @@ public class T1_WindowsHandling {
 
 
         //4. Create a logic to switch to the tab where Etsy.com is open
+
+
+        BrowserUtils.switchWindowAndVerify(driver, "etsy","Etsy");
 
         Set<String> allWindowsHandles = driver.getWindowHandles();
 
