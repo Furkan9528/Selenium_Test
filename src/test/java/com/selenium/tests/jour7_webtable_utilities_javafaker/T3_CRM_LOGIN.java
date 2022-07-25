@@ -52,5 +52,22 @@ public class T3_CRM_LOGIN {
 
 
 
+    @Test
+    public void crm_login_test_2(){
+
+        //2. Go to : http://login1.nextbasecrm.com/
+        driver.get("https://login1.nextbasecrm.com/");
+
+
+
+        //6. Verify title is as expected:
+        //Expected: Portal
+        BrowserUtils.verifyTitle(driver, "Portal");
+
+
+    }
+
+
+
 
 }
