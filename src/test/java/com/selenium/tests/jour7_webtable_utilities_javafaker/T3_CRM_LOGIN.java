@@ -1,6 +1,7 @@
 package com.selenium.tests.jour7_webtable_utilities_javafaker;
 
 import com.selenium.utilities.BrowserUtils;
+import com.selenium.utilities.CRM_Utilities;
 import com.selenium.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 public class T3_CRM_LOGIN {
 
     public WebDriver driver;
-
 
     @BeforeMethod
     public void setupMethod(){
@@ -50,15 +50,14 @@ public class T3_CRM_LOGIN {
 
     }
 
-
-
     @Test
     public void crm_login_test_2(){
 
         //2. Go to : http://login1.nextbasecrm.com/
         driver.get("https://login1.nextbasecrm.com/");
 
-
+        //Calling my utility method to login helpdesk1
+        CRM_Utilities.crm_login(driver);
 
         //6. Verify title is as expected:
         //Expected: Portal
@@ -67,7 +66,22 @@ public class T3_CRM_LOGIN {
 
     }
 
+    @Test
+    public void crm_login_test_3(){
 
+        //2. Go to : http://login1.nextbasecrm.com/
+        driver.get("https://login1.nextbasecrm.com/");
+
+        //Calling my utility method to login helpdesk1
+        CRM_Utilities.crm_login(driver,"helpdesk2@cybertekschool.com", "UserUser");
+
+        //6. Verify title is as expected:
+        //Expected: Portal
+        BrowserUtils.sleep(2);
+        BrowserUtils.verifyTitle(driver, "Portal");
+
+
+    }
 
 
 }
