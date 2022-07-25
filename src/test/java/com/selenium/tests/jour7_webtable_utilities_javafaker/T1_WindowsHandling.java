@@ -1,4 +1,4 @@
-package com.selenium.tests.day7_webtable_utilities_javafaker;
+package com.selenium.tests.jour7_webtable_utilities_javafaker;
 
 import com.selenium.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
@@ -57,12 +57,7 @@ public class T1_WindowsHandling {
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
 
-        
 
     }
-
-
-
-
 
 }
